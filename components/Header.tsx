@@ -9,7 +9,6 @@ const Container = styled.SafeAreaView`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
 `;
 const Title = styled.Text`
   font-size: 28px;
