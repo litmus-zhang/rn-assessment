@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   ProductCardWwrapper,
   Image,
   ActionButton,
   DetailsButton,
 } from "../styles";
-import { View, Text, TextBase, Button } from "react-native";
+import { Text, Button } from "react-native";
 
-export default function ProductCard() {
-  const [product, setProduct] = useState([]);
+interface ProductCardProps {
+  title: string;
+  price: string;
+  sourceImage: string;
+}
 
-  const fetchProduct = async () => {
-    const response = await fetch(
-      "https://shop.comeriver.com/widgets/Application_Article_ShowAll?pc_widget_output_method=JSON"
-    );
-    const data = await response.json();
-    setProduct(data);
-    console.log(product);
-  };
+export default function ProductCard(props?: ProductCardProps) {
   return (
     <ProductCardWwrapper>
       <Image
