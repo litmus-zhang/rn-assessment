@@ -40,26 +40,4 @@ export const ProductCardWwrapper = styled.View`
   padding: 10px;
   width: 92%;
   text-align: left;
-  .product-name {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .product-price {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .add-to-cart {
-    background-color: #000;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    text-align: center;
-  }
-  ,
-  .product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
 `;
