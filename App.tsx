@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { ScrollView, View } from "react-native";
+import Header from "./components/Header";
+import ProductCard from "./components/ProductCard";
+import { Box } from "./styles";
+// const Samples = {
 
+const products = new Array(10).fill(null).map((v, i) => i + 1);
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Header headerTitle="ComeRiver" />
+      <ScrollView>
+        <Box>
+          {products.map((product) => (
+            <ProductCard key={product} />
+          ))}
+        </Box>
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
